@@ -81,14 +81,13 @@
         url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
   </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navScroll">
-
-<div w3-include-html="includes/nav.html"></div>
-
+<body>
+<!--Nav-->
+<div w3-include-html="includes/nav.html" data-bs-spy="scroll" data-bs-target="#navScroll"></div>
+<!--/Nav-->
 <main>
   <div class="w-100 overflow-hidden bg-gray-100" id="top">
     <div class="container position-relative">
@@ -265,36 +264,37 @@
   </div>
 
 </main>
-
+<!--Footer-->
 <div w3-include-html="includes/footer.html"></div>
+<!--/Footer-->
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-  AOS.init({
-    duration: 800, // values from 0 to 3000, with step 50ms
-  });
-  </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 800, // values from 0 to 3000, with step 50ms
+    });
+    </script>
 
-  <script>
-    let scrollpos = window.scrollY
-    const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
+    <script>
+      let scrollpos = window.scrollY
+      const header = document.querySelector(".navbar")
+      const header_height = header.offsetHeight
 
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+      const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+      const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
 
-    window.addEventListener('scroll', function() {
-      scrollpos = window.scrollY;
+      window.addEventListener('scroll', function() {
+        scrollpos = window.scrollY;
 
-      if (scrollpos >= header_height) { add_class_on_scroll() }
-      else { remove_class_on_scroll() }
+        if (scrollpos >= header_height) { add_class_on_scroll() }
+        else { remove_class_on_scroll() }
 
-      console.log(scrollpos)
-    })
-  </script>
-  <script>
-    includeHTML();
-  </script>
+        console.log(scrollpos)
+      })
+    </script>
+    <script>
+      includeHTML();
+    </script>
   </body>
 </html>
