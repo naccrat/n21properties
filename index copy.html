@@ -1,708 +1,308 @@
 <!doctype html>
 <html class="h-100" lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTML4HL3YL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <head>
-      <meta charset="utf-8">
+  gtag('config', 'G-XTML4HL3YL');
+</script>
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+  </script>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>N21 Investments - Real Estate Investing</title>
+  <meta name="description" content="Short term rental co-host and Real estate investing with Anthony Naccarato.">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
   <link rel="stylesheet" href="css/theme.min.css">
+  <meta name="author" content="Anthony Naccarato">
+  <meta name="HandheldFriendly" content="true">
+  <title>N21 Properties | Anthony Naccarato, Airbnb Superhost</title>
 
-   <style>
+  <style>
+  /* inter-300 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local(''),
+        url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
-/* inter-300 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(''),
+        url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''),
+        url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+  </style>
+</head>
 
-</style>
-
-  </head>
-
-  <body data-bs-spy="scroll" data-bs-target="#navScroll">
-
-    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#navScroll">
+<nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
   <div class="container">
     <a class="navbar-brand pe-4 fs-4" href="/">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg>
-  <span class="ms-1 fw-bolder">Stride</span>
-</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-      Services
+      <svg width="46" height="35" viewBox="0 0 46 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11L19 0.5L37 10.4474V3H38V11V16V26H40V5H41V26H46V27H41V29H43V30H41V32H40V30H38V35H37V30H21H18H17H8H4V29V13.7895L0 16V11ZM37 29H21V27H37V29ZM37 26H21V8L19 7L17 8V21.8333L9 12.5V19.5L17 28.8333V29H8V11.5789L19 5.5L37 15.4474V26ZM37 14.3048V11.5899L20 2.19517V4.91009L37 14.3048ZM40 29V27H38V29H40ZM24.5306 22.0028V23H29.1968V21.8686H26.4482V21.8239L27.4038 20.8874C27.8534 20.4783 28.2018 20.1278 28.4489 19.8359C28.6961 19.5419 28.8676 19.2745 28.9635 19.0337C29.0615 18.793 29.1105 18.549 29.1105 18.3018C29.1105 17.9247 29.0135 17.5902 28.8197 17.2983C28.6258 17.0064 28.3541 16.7784 28.0047 16.6143C27.6574 16.4482 27.2493 16.3651 26.7806 16.3651C26.3246 16.3651 25.9219 16.4513 25.5725 16.6239C25.2231 16.7965 24.9514 17.0405 24.7575 17.3558C24.5636 17.6712 24.4667 18.043 24.4667 18.4712H25.7802C25.7802 18.2624 25.8207 18.0824 25.9017 17.9311C25.9827 17.7798 26.0977 17.6637 26.2469 17.5827C26.396 17.5018 26.5707 17.4613 26.771 17.4613C26.9628 17.4613 27.1343 17.4996 27.2856 17.5763C27.4368 17.6509 27.5562 17.7585 27.6435 17.8991C27.7309 18.0376 27.7746 18.2028 27.7746 18.3945C27.7746 18.5671 27.7394 18.728 27.6691 18.8771C27.5988 19.0241 27.4954 19.1744 27.3591 19.3278C27.2248 19.4812 27.0586 19.6538 26.8605 19.8455L24.5306 22.0028ZM32.5972 23V16.4545H31.2964L29.676 17.4805V18.7077L31.175 17.7681H31.2133V23H32.5972Z" fill="#333333"/>
+        </svg>
+      <span class="ms-1 fw-bolder">N21 Properties</span>
     </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#aboutus">
-      About us
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#numbers">
-      Numbers
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#gallery">
-      Gallery
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#workwithus">
-      Work with us
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#testimonials">
-      Testimonials
-    </a>
-  </li>
-
-    </ul>
-      <a href="https://templatedeck.com" data-splitbee-event="Click Download" aria-label="Download this template" class="link-dark pb-1 link-fancy me-2">
-        Download this Template       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download ms-1" viewBox="0 0 16 16">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-              </svg>
-      </a>
-
-    </div>
-</div>
+    <div w3-include-html="includes/nav.html"></div>
+  </div>
 </nav>
 
-    <main>
-      <div class="w-100 overflow-hidden bg-gray-100" id="top">
-  
-<div class="container position-relative">
-  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/webp/interior11.webp);">
-    
-  </div>
-    <div class="row">
-
-<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">Sell more useless stuff faster!</h1>
-  <p class="lead">To be honest, this is just a stupid placeholder text. We don´t know how to sell anything, not even lesser or slower as you.</p>
-  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Get started free</a>
-</div>
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="services">
-  <div class="container">
-      <div class="row d-flex justify-content-end">
-<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Okay, there are three really good reasons for us. There are no more than three, but we think three is a reasonable good number of good stuff.</h2></div>
-</div>
-<div class="row d-flex align-items-center">
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-  <span class="h5 fw-lighter">01.</span>
-  <h3 class="py-5 border-top border-dark">We rented this fancy startup office in an old factory building.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
-  <span class="h5 fw-lighter">02.</span>
-  <h3 class="py-5 border-top border-dark">We don´t know exactly what we are doing. But thats good because we can´t break something intentionally.</h3>
-  <p>Lorem, ipsum dolor sit  adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-  <span class="h5 fw-lighter">03.</span>
-  <h3 class="py-5 border-top border-dark">There is no real number three reason. So please read again number one and two.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
-  <div class="container">
-      
-<div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-6">
-  <div class="row gx-5 d-flex">
-    <div class="col-md-11">
-      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/webp/people15.webp);--bs-aspect-ratio: 50%;">
+<main>
+  <div class="w-100 overflow-hidden bg-gray-100" id="top">
+    <div class="container position-relative">
+      <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/rental-property-stage.png);">
       </div>
-    </div>
-    <div class="col-md-5 offset-md-1">
-      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/webp/interior42.webp);">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/webp/people4.webp);--bs-aspect-ratio: 150%;">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-lg-4">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-left">We did some interesting stuff in our field of work. For example we collect a lot of these free photos and use them on our website.</h3>
-  <p data-aos="fade-left" data-aos-delay="200">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  </p>
-  <p>
-    <a href="#" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
-    </a>
-  </p>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
-  <div class="container">
-      <div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-5">
-    <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our magic numbers</h3>
-</div>
-<div class="col-lg-6">
-  <div class="row">
-    <div class="col-12">
-    <h2 class="display-6 mb-5" data-aos="fade-down">There are some important numbers for us. They are just numbers without any meaning, but we just love them.</h2>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">42%</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">+300</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
-  <div class="container-fluid">
-  <div class="row overflow-scroll">
-    <div class="col-12">
-      <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
-        <div class="col-md-2" data-aos="fade-up">
-            <img src="img/webp/interior37.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/webp/people1.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/webp/people2.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-            <img src="img/webp/interior29.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
-            <img src="img/webp/people23.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
-        </div>
-      </div>
-    </div>
-   </div>
- </div>
-
-</div>
-
-<div class="container py-vh-4 w-100 overflow-hidden">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-5">
-      <h3 class="py-5 border-top border-dark" data-aos="fade-right">What our clients say</h3>
-    </div>
-    <div class="col-md-7" data-aos="fade-left">
-      <blockquote>
-        <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">“I´am the CEO of this company. So maybe you think "he will tell us something super awesome about it only". But no. Its a really strange place to work with creepy people all around.
-          They do some computer stuff I don´t understand. But I wear expensive Glasses and a Patagonia Hoodie. So I´am fine with it.”</div>
-        <img src="img/webp/person11.webp" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
-        <span><span class="fw-bold">John Doe,</span>
-          CEO of Stride Ltd.</span>
-      </blockquote>
-    </div>
-  </div>
-</div>
-
-<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="row d-flex justify-content-center text-center">
-  <div class="col-lg-8 text-center" data-aos="fade">
-        <p class="text-secondary lead">Let´s start a project together!</p>
-    <h2 class="display-6 mb-5">Hell no! This button is linked to a none working contact form. A none working form without any user feedback. So you might think you done something wrong. But in reality we just don´t want to start anything with you or anyone else.</h2>
-  </div>
-  <div class="col-12">
-    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-<div class="bg-light w-100 overflow-hidden" id="testimonials">
-  <div class="container py-vh-6">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-lg-10 col-xl-8 text-center">
-        <h2 class="display-6">Loved by people all around the globe</h2>
-        <p class="lead">Our spaces and offices are soooooo lovely, no one would give us a negative rating! And look at these trustworthy avatar pictures! Trust us!</p>
-      </div>
-      <div class="col-12 mt-4">
-        <div class="row row-cols-1 row-cols-md-2 g-5 d-flex align-items-center">
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-right">
-            <div class="card p-4 mt-3 border-0">
-              <div class="card-body">
-                <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
-  <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"That service is really really good. And I don´t say that because they pay me a lot of money. I say that because they don´t pay me more money anymore if I don´t say it..."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <div>
-              <span class="h6 fw-5">Jane Doemunsky</span><br>
-              <small class="text-muted">COO, The Boo Corp.</small>
-            </div>
-            <img src="img/webp/person9.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 shadow mt-3 border-0" data-aos="fade-down">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"I really don´t get what they do. Something with Crypto, NFT´s, SaaS and Cyber Security. Maybe an App for Kids...? But they have this nice website...so who cares what they do as long as they are good at it."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">Jenny Matrix</span><br>
-              <small class="text-muted">Daughter of Col. John Matrix, Commando.</small>
-            </p>
-            <img src="img/webp/person3.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 mt-3 border-0" data-aos="fade-left">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"I don´t know if they are good at what they do. But they have nice coffee and a shiny brand new startup office with bikes on the wall and all that stuff."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">Rustin Cohle</span><br>
-              <small class="text-muted">Detective, Somewhere in the swamps</small>
-            </p>
-            <img src="img/webp/person8.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 mt-3 border-0" data-aos="fade-right">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
-  <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"Its not good at all but I give it five stars because I killed (accidentally) the CEO´s cat with a lawnmover."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">Richard Thornburg</span><br>
-              <small class="text-muted">News Reporter, KFLW-TV</small>
-            </p>
-            <img src="img/webp/person14.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 mt-3 border-0" data-aos="fade-up">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-half" viewBox="0 0 16 16">
-  <path d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"I´am just a guy who uploads his picture to unsplash.com so that others can use me as placeholder for stupid sample avatars. I don´t even know that my face is on this website."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">Harry Walters</span><br>
-              <small class="text-muted">Gangster, In Bruges</small>
-            </p>
-            <img src="img/webp/person13.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 shadow mt-3 border-0" data-aos="fade-left">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-</div>
-          <blockquote class="blockquote">
-            <p>"Okay, okay, I give it five stars. But do you know what: There is a infinit number of stars out there. So five means nothing."</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">Lizzie Stark</span><br>
-              <small class="text-muted">Head of Security, Brummagem Boys</small>
-            </p>
-            <img src="img/webp/person18.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-<div class="small py-vh-3 w-100 overflow-hidden">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-box-seam" viewbox="0 0 16 16">
-        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Delivery Service</h3>
-      <p>If we had any physical goods we would deliver them to your door steps. Of course in time and to the right adress. But we have no products...</p>
-    </div>
-  </div>
-</div>
-<div class="col-md-6 col-lg-4 border-end" data-aos="fade-up" data-aos-delay="200">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-card-checklist" viewbox="0 0 16 16">
-        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Independently Checked</h3>
-      <p>Maybe we would do something to ensure that you get what you ordered. But you can´t order anything here, so we can give you a 100% gurantee that anything would be great!</p>
-    </div>
-  </div>
-</div>
-
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-window-sidebar" viewbox="0 0 16 16">
-        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Online Support</h3>
-      <p>Okay, we have this crazy online support form. Fill it out and the content will be mailed to you as PDF. Print it out. Than send it via Fax to our super duper hidden Fax number.</p>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-<div class="container py-vh-3 border-top" data-aos="fade" data-aos-delay="200">
-  <div class="row d-flex justify-content-center">
-    <div class="col-12 col-lg-8 text-center">
-      <h3 class="fs-2 fw-light">Stay in touch with our<span class="fw-bold">
-          monthly and free</span>
-        newsletter!
-    </h3></div>
-    <div class="col-12 col-lg-8 text-center">
       <div class="row">
-        <div class="grouped-inputs border bg-light p-2">
-  <div class="row">
-    <div class="col">
-      <form class="form-floating">
-        <input type="email" class="form-control p-3" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </form>
-    </div>
-    <div class="col-auto">
-      <a href="#" class="btn btn-dark py-3 px-5">Subscribe</a>
-    </div>
-  </div>
-</div>
-
+        <div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+          <h1 class="display-3 fw-bold mt-5">Welcome</h1>
+          <p class="lead">We are a full service short term rental company that helps real estate investors and property owners increase their monthly cashflow.</p>
+          <a class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5" href="#workwithus">
+            Get in touch
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-    </main>
+  <div class="py-vh-5 w-100 overflow-hidden" id="services">
+    <div class="container">
+        <div class="row d-flex ">
+            <div class="col-lg-8" data-aos="fade-down">
+                <h2 class="display-6">Earn more as a rental property owner</h2>
+                <p class="text-secondary">Partner with N21 Properties through Airbnb Arbitrage and see the benefits it provides</p>
+                <p>We can help you earn more on your rental properties. Our service allows you to earn consistent rent on every one of your vacant units. We handle all management so you can enjoy the same hands off cash flow&mdash;just more of it!</p>
+                <p class="fw-bolder">N21 Properties can help you:</p>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <span class="h5 fw-lighter">01.</span>
+          <h3 class="py-5 border-top border-dark">Achieve consistent passive income</h3>
+          <p>As an expert in the real estate industry, my main focus is helping long term rental investors achieve consistent monthly rent. With my extensive knowledge and experience, I provide valuable insights and strategies to ensure that my clients get the most out of their investments.</p>
+        </div>
 
-    <footer>
-  <div class="container small border-top">
-    <div class="row py-5 d-flex justify-content-between">
+        <div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+          <span class="h5 fw-lighter">02.</span>
+          <h3 class="py-5 border-top border-dark">Be profitable &amp; successful</h3>
+          <p>By working closely with my clients, I analyze their specific needs and provide customized solutions to ensure their long term rental properties are profitable and successful. My goal is to help my clients achieve financial stability through real estate investments and provide a consistent and reliable stream of income.</p>
+        </div>
 
-<div class="col-12 col-lg-6 col-xl-3 border-end p-5">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg>
-  <address class="text-secondary mt-3">
-    <strong>Stride, Inc.</strong><br>
-    1355 Market St, Suite 900<br>
-    San Francisco, CA 94103<br>
-    <abbr title="Phone">P:</abbr>
-    (123) 456-7890
-  </address>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 border-end p-5">
-  <h3 class="h6 mb-3">Company</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="#">Lorem ipsum</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Dolor sitam est</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Sed odio cras</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Commodo tortor ac</a>
-    </li>
-  </ul>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 border-end p-5">
-  <h3 class="h6 mb-3">Products</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="#">Fusce dapibus est</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Donec sed dui</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Tortor mauris</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Ut fermentum massa</a>
-    </li>
+        <div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+          <span class="h5 fw-lighter">03.</span>
+          <h3 class="py-5 border-top border-dark">Meet your financial goals</h3>
+          <p>Whether my clients are experienced investors or new to the industry, I strive to provide top-notch service and support throughout the entire investment process. With my expertise and guidance, my clients can rest assured that their long term rental properties are in good hands and that they are on the path to achieving their financial goals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="#">Magna mollis</a>
-    </li>
-  </ul>
-</div>
-<div class="col-12 col-lg-6 col-xl-3 p-5">
-  <h3 class="h6 mb-3">Subpages</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="404.html">404 System Page</a>
-      <a class="nav-link link-secondary ps-0" aria-current="page" href="register.html">Register System Page</a>
-            <a class="nav-link link-secondary ps-0" aria-current="page" href="content.html">Simple Text Content Page</a>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
+  <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden">
+    <div class="container">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-lg-6">
+          <div class="row gx-5 d-flex">
+            <div class="col-md-11">
+              <div class="" data-aos="fade-right" style="background-image: url(img/airbnb-superhost-rentals.png);">
+              </div>
+              <img src="img/airbnb-superhost-rentals.png" class="shadow" width="100%"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3 class="py-5 border-top border-dark" data-aos="fade-left">Expertise with Airbnb and short term rentals</h3>
+          <p data-aos="fade-left" data-aos-delay="200">As a Superhost, I prioritize excellent communication with my guests, ensuring that all their questions and concerns are promptly addressed. I also pay close attention to the cleanliness and overall presentation of the properties, ensuring that they are always welcoming and comfortable for guests.</p>
+          <p data-aos="fade-left" data-aos-delay="300">Being an Airbnb Superhost for my Florida and Utah properties is a fulfilling endeavor that I take great pride in. I am committed to providing the best possible experience for my partners and maintaining my status as a Superhost for years to come. <strong>This will help my partners maintain their properties and continue their passive income stream for years to come.</strong></p>
+          <p data-aos="fade-left" data-aos-delay="400">
+              <a href="https://www.airbnb.com/users/show/31115079" class="link-fancy" aria-label="View my Airbnb profile">View my Airbnb profile</a>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="container text-center py-3 small">Made by <a href="https://templatedeck.com" class="link-fancy" target="_blank">templatedeck.com</a>
-</div>
-</footer>
+  <div class="py-vh-5 w-100 overflow-hidden" id="about">
+    <div class="container">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-lg-5">
+          <p><img src="img/profile-image.jpg" class="img-fluid" alt="article image"></p>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="py-5 border-top border-dark" data-aos="fade-right">About N21 Properties</h3>
+              <p class="mb-5" data-aos="fade-down"><strong>My name is Anthony Naccarato and I am a real estate investor and owner of N21 Properties. As someone who hails from Utah, I am happily married with four children and we love to spend time in Florida.</strong> My dedication to my family and my entrepreneurial spirit all play an important role in my life and have led me to pursue opportunities in the real estate industry. Through my work as an investor and Airbnb superhost, I am able to combine my passions for travel, which has inspired me to invest in properties that cater to travelers and vacationers.</p>
+              <p class="mb-5" data-aos="fade-down">I love exploring new destinations and immersing myself in different cultures. I believe that travel is not only a source of personal enrichment but also a way to gain valuable insights into the hospitality industry and to find inspiration for my real estate investments.</p>
+              <a class="btn btn-dark btn-xl shadow me-3 rounded-0 my-3" data-aos="fade-down" href="#workwithus">
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/aos.js"></script>
- <script>
- AOS.init({
-   duration: 800, // values from 0 to 3000, with step 50ms
- });
- </script>
+  <div class="small bg-gray-100 py-vh-3 w-100 overflow-hidden" id="benefits">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-12 py-5 text-center">
+          <h3 class="fs-2 fw-light">Benefits for rental property owners</h3>
+        </div>
+        <div class="col-md-6 col-lg-4 border-end aos-init aos-animate" data-aos="fade-up">
+          <div class="d-flex">
+            <div class="col-md-9 flex-fill">
+              <h3 class="h5 my-2">Guaranteed monthly rent</h3>
+              <p>Our committment is that the you will always get paid on time every month with us as the tenant. They won't have to worry about always running after a tenant who may be late on rent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 border-end aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+          <div class="d-flex">
+            <div class="col-md-9 flex-fill">
+              <h3 class="h5 my-2">High standards for guests staying</h3>
+              <p>Airbnb has stricked requirments and a screening process for tenents, and we moniter that very closely. We will cover the cost of any repairs or damages caused by renters, while any significant damages are covered by Airbnb's $1 million damage protection insurance coverage.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+          <div class="d-flex">
+            <div class="col-md-9 flex-fill">
+              <h3 class="h5 my-2">A team to maintain the property</h3>
+              <p>Scuffed walls, a beat-up floor, and generally not keeping the place clean will not produce 5-star reviews. And that isn't good for our business. In other words, we have a vested interest in making sure the apartment is always in top condition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-12 py-5 text-center">
+          <p class="fw-light"><a href="co-hosting.html" class="link-fancy">Learn more about hiring a co-host.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
+  <div class="container py-vh-3" data-aos="fade" data-aos-delay="200" id="workwithus">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 col-lg-8">
+        <h3 class="fs-2 fw-light text-center mb-4">Get in touch</h3>
+      </div>
+      <div class="col-12 col-lg-8">
+          <div class="row">
+            <div class="col bg-light border px-5 py-4">
 
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+              <form class="row" 
+                name="contact" 
+                method="post" 
+                data-netlify-recaptcha="true" 
+                data-netlify="true">
+                
+                <div class="col-12">
+                  
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control form-control-lg p-3" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control form-control-lg p-3" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputMessage" class="form-label">Message</label>
+                    <textarea type="text" name="message" class="form-control form-control-lg p-3" id="exampleInputMessage"></textarea>
+                  </div>
+                  <div class="mb-3" data-netlify-recaptcha="true"></div>
+                  <button type="submit" class="btn btn-primary btn-xl">Submit</button>
+                </div>
+              </form>
 
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
+</main>
 
-    console.log(scrollpos)
-  })
-</script>
+<div w3-include-html="includes/footer.html"></div>
 
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+  </script>
+
+  <script>
+    let scrollpos = window.scrollY
+    const header = document.querySelector(".navbar")
+    const header_height = header.offsetHeight
+
+    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+    window.addEventListener('scroll', function() {
+      scrollpos = window.scrollY;
+
+      if (scrollpos >= header_height) { add_class_on_scroll() }
+      else { remove_class_on_scroll() }
+
+      console.log(scrollpos)
+    })
+  </script>
+  <script>
+    includeHTML();
+  </script>
   </body>
 </html>
