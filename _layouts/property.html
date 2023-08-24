@@ -1,0 +1,69 @@
+{% include head.html %}
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+  {% include nav.html %}
+  <main>
+    <div class="overflow-hidden">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="col-lg-12 py-vh-3 text-center">
+            <h1 class="display-3 text-uppercase mt-5 pt-5">{{ page.title }}</h1>
+						<p class="lead">{{ page.subtitle }}</p>
+            <img src="/img/properties/{{ page.featured_image.one }}" class="w-75 img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="py-vh-3 w-100 overflow-hidden">
+      <div class="container">
+        <div class="row d-flex justify-content-between">
+          <div class="col-lg-6">
+            <h3 class="text-uppercase">About our home</h3>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M160 64A32 32 0 1 0 96 64a32 32 0 1 0 64 0zM64 64a64 64 0 1 1 128 0A64 64 0 1 1 64 64zM57.8 236l-4.1 49.3C52.1 304 66.8 320 85.6 320h84.9c18.7 0 33.4-16 31.9-34.7L198.2 236c-2.1-24.9-22.9-44-47.8-44H105.6c-25 0-45.8 19.1-47.8 44zm-31.9-2.7C29.3 191.9 64 160 105.6 160h44.8c41.6 0 76.3 31.9 79.7 73.4l4.1 49.3c2.5 29.8-15.7 56.1-42.2 65.6V496c0 8.8-7.2 16-16 16s-16-7.2-16-16V352H96V496c0 8.8-7.2 16-16 16s-16-7.2-16-16V348.3c-26.5-9.5-44.7-35.8-42.2-65.6l4.1-49.3zM416 64a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm-96 0a64 64 0 1 1 128 0A64 64 0 1 1 320 64zm17.5 151.2L298.4 352H469.6L430.5 215.2C426.6 201.5 414 192 399.7 192H368.3c-14.3 0-26.8 9.5-30.8 23.2zm-30.8-8.8c7.8-27.5 33-46.4 61.5-46.4h31.4c28.6 0 53.7 18.9 61.5 46.4l39.1 136.8c5.8 20.4-9.5 40.8-30.8 40.8H448V496c0 8.8-7.2 16-16 16s-16-7.2-16-16V384H352V496c0 8.8-7.2 16-16 16s-16-7.2-16-16V384H298.4c-21.3 0-36.6-20.3-30.8-40.8l39.1-136.8z"/></svg>
+              {{ page.guests }} guests • 
+              {{ page.bedrooms }} bedrooms • {{ page.beds }} beds • {{ page.bathrooms }} bathrooms<p>
+
+            {{ content }}
+          </div>
+          <div class="col-lg-6">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
+      <div class="container-fluid">
+        <div class="row overflow-scroll">
+          <div class="col-12">
+            <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
+              <div class="col-md-2 aos-init aos-animate" data-aos="fade-up">
+                  <img src="img/webp/interior37.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+              </div>
+      
+              <div class="col-md-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                  <img src="img/webp/people1.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
+              </div>
+      
+              <div class="col-md-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                  <img src="img/webp/people2.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
+              </div>
+      
+              <div class="col-md-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                  <img src="img/webp/interior29.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
+              </div>
+      
+              <div class="col-md-2 aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
+                  <img src="img/webp/people23.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  {% include footer.html %}
+  </body>
+</html>

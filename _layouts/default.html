@@ -1,0 +1,25 @@
+{% include head.html %}
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+  {% include nav.html %}
+  <main>
+    <div class="w-100 overflow-hidden text-light">
+      <div class="container-fluid position-relative" style="background-color: #000000;">
+        <div class="col-12 col-lg-12 mt-0 h-100 position-absolute top-0 end-0 bg-cover" style="background-image: url(/img/{{ page.main-image }}); opacity: 0.3;">
+        </div>
+        <div class="container">
+          <div class="col-lg-10 py-vh-5 position-relative">
+            <h1 class="display-3 fw-bold mt-5 pt-5">{{ page.title }}</h1>
+            <p class="lead">{{ page.services }}</p>
+            <a class="btn btn-custom-secondary btn-xl shadow me-1 my-1" href="tel:{{ site.data.settings.basic_settings.phone }}">
+              {{ site.data.settings.basic_settings.phone }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  </body>
+</html>
+ 

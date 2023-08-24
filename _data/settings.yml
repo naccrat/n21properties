@@ -1,0 +1,84 @@
+basic_settings:
+  title: N21 Properties
+  description: Real Estate Rental Host &amp; Co-host 
+  phone: (385) 786-6805
+  logo: 
+  logo-width: 
+  location: "Salt Lake City, Utah"
+  google_analytics: G-XTML4HL3YL
+  site_author: Anthony Naccarato
+
+font_settings:
+  font_embed: "https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Open+Sans:wght@300;400;700&display=swap" 
+  title_font: 'Bodoni Moda'
+  body_font: 'Open Sans'
+
+# Custom Navbar Colors
+navbar_colors:
+  bg: "rgba(255, 255, 255, .96)"
+  menu_color: "#000000"
+  menu_hover_color: "#000000"
+  active_color: "#000000"
+  menu_color: "#000000"
+  brand_menu_color: "#000000"
+  brand_menu_hover_color: "#000000"
+
+navbar_spacing:
+  padding_top: 24px
+  padding_bottom: 24px;
+  
+# Background color for the call to action box
+cta:
+  bg: "linear-gradient(155deg, rgba(69,56,133,1) 0%, rgba(35,55,89,0.6) 100%);"
+
+# Background color for the form submission box 
+form: 
+  bg: "#229155"
+
+# Custom button
+btn-custom-primary:
+  text-color: "#ffffff"
+  bg: "#000000"
+  border-color: "#000000"
+  hover-text-color: "#ffffff"
+  hover-bg: "#3f3f3f"
+  hover-border-color: "#3f3f3f"
+
+btn-custom-secondary:
+  text-color: "#000000"
+  bg: "#ffffff"
+  border-color: "#ffffff"
+  hover-text-color: "#000000"
+  hover-bg: "#dddddd"
+  hover-border-color: "#dddddd"
+
+btn-border-radius: "0px"
+
+social_settings:
+  facebook_url: 'https://www.facebook.com/325studio/'
+  twitter_url: 'https://twitter.com/325studioDesign'
+  instagram_url: 'https://www.instagram.com/325studiodesign/'
+  youtube_url: ''
+  medium_url: ''
+  dribbble_url: 'https://dribbble.com/tonynaccarato'
+  github_url: ''
+  linkedin_url: ''
+
+# Local Business Schema
+schema:
+  type: LocalBusiness
+  # name: Same as title above
+  # image: Same as logo above
+  # telephone: Same as phone above
+  priceRange: "$"
+  address:
+    city: "Salt Lake City"
+    state: "Utah"
+    country: "USA"
+    postalCode: "84101"
+  hours:
+    dayOfWeek: "Monday-Friday"
+    opens: "09:00"
+    closes: "17:00" #Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30
+  # url: Same as url above
+# End Schema

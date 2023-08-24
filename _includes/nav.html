@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand pe-4" href="/">
+      {% if site.data.settings.basic_settings.logo %}
+      <img src="{{ site.url }}/img/{{ site.data.settings.basic_settings.logo }}" width="{{ site.data.settings.basic_settings.logo-width }}" alt="{{ site.data.settings.basic_settings.title }}">
+      {% else %}
+      <svg width="46" height="35" viewBox="0 0 46 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11L19 0.5L37 10.4474V3H38V11V16V26H40V5H41V26H46V27H41V29H43V30H41V32H40V30H38V35H37V30H21H18H17H8H4V29V13.7895L0 16V11ZM37 29H21V27H37V29ZM37 26H21V8L19 7L17 8V21.8333L9 12.5V19.5L17 28.8333V29H8V11.5789L19 5.5L37 15.4474V26ZM37 14.3048V11.5899L20 2.19517V4.91009L37 14.3048ZM40 29V27H38V29H40ZM24.5306 22.0028V23H29.1968V21.8686H26.4482V21.8239L27.4038 20.8874C27.8534 20.4783 28.2018 20.1278 28.4489 19.8359C28.6961 19.5419 28.8676 19.2745 28.9635 19.0337C29.0615 18.793 29.1105 18.549 29.1105 18.3018C29.1105 17.9247 29.0135 17.5902 28.8197 17.2983C28.6258 17.0064 28.3541 16.7784 28.0047 16.6143C27.6574 16.4482 27.2493 16.3651 26.7806 16.3651C26.3246 16.3651 25.9219 16.4513 25.5725 16.6239C25.2231 16.7965 24.9514 17.0405 24.7575 17.3558C24.5636 17.6712 24.4667 18.043 24.4667 18.4712H25.7802C25.7802 18.2624 25.8207 18.0824 25.9017 17.9311C25.9827 17.7798 26.0977 17.6637 26.2469 17.5827C26.396 17.5018 26.5707 17.4613 26.771 17.4613C26.9628 17.4613 27.1343 17.4996 27.2856 17.5763C27.4368 17.6509 27.5562 17.7585 27.6435 17.8991C27.7309 18.0376 27.7746 18.2028 27.7746 18.3945C27.7746 18.5671 27.7394 18.728 27.6691 18.8771C27.5988 19.0241 27.4954 19.1744 27.3591 19.3278C27.2248 19.4812 27.0586 19.6538 26.8605 19.8455L24.5306 22.0028ZM32.5972 23V16.4545H31.2964L29.676 17.4805V18.7077L31.175 17.7681H31.2133V23H32.5972Z" fill="#333333"/>
+        </svg>
+      <span class="ms-1">{{ site.data.settings.basic_settings.title }}</span>
+      {% endif %}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% assign links = site.data.navigation %}
+          {% for link in links %}
+            {% assign class = nil %}
+              {% if page.url contains link.url %}
+                  {% assign class = 'active' %}
+              {% endif %}
+            {% if link.sublinks %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ class }}" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ link.title }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% for sublink in link.sublinks %}
+                    {% if sublink.title == 'separator' %}
+                      <li role="separator" class="divider py-2"></li>
+                      {% else %}
+                      <li class="py-2">
+                        <a class="dropdown-item" href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">
+                          {{ sublink.title }}
+                        </a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link {{ class }}" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+      <a href="tel:{{ site.data.settings.basic_settings.phone }}" data-splitbee-event="Call Us" aria-label="Call Us {{ site.data.settings.basic_settings.phone }}" class="btn btn-custom-primary px-3 py-2">
+        {{ site.data.settings.basic_settings.phone }}
+      </a>
+    </div>
+  </div>
+</nav>
