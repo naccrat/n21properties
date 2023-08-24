@@ -3,32 +3,29 @@
   {% include nav.html %}
   <main>
     <div class="overflow-hidden">
-      <div class="container-fluid">
-        <div class="container">
-          <div class="col-lg-12 py-vh-3 text-center">
-            <h1 class="display-3 text-uppercase mt-5 pt-5">{{ page.title }}</h1>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 py-vh-3 text-center">
+            <h1 class="display-3 mt-5 pt-5">{{ page.title }}</h1>
 						<p class="lead">{{ page.subtitle }}</p>
-            <img src="/img/properties/{{ page.featured_image.one }}" class="w-75 img-fluid">
+            <img src="/img/properties/{{ page.featured_image.one }}" class="img-fluid">
           </div>
         </div>
       </div>
     </div>
    
-    <div class="py-vh-3 w-100 overflow-hidden">
+    <div class="py-vh-3 overflow-hidden">
       <div class="container">
-        <div class="row d-flex justify-content-between">
-          <div class="col-lg-6">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
             <h3 class="text-uppercase">About our home</h3>
             <p>
               <i class="fa-light fa-people-simple"></i> {{ page.guests }} guests • 
-              <i class="fa-light fa-bed-empty"></i> {{ page.bedrooms }} bedrooms • 
-              <i class="fa-light fa-bed-empty"></i> {{ page.beds }} beds • 
-              {{ page.bathrooms }} bathrooms<p>
+              <i class="fa-light fa-bed-empty"></i> {{ page.bedrooms }} bedrooms •  {{ page.beds }} beds • 
+              <i class="fa-light fa-bath"></i> {{ page.bathrooms }} bathrooms
+            <p>
 
             {{ content }}
-          </div>
-          <div class="col-lg-6">
-            
           </div>
         </div>
       </div>
