@@ -1,7 +1,5 @@
 url: https://n21properties.com
 
-category-list: [services]
-
 collections:
   properties:
     output: true

@@ -17,7 +17,7 @@
         <h4 class="h6 fw-light">{{ site.data.settings.basic_settings.description }}</h4>
         <address class="text-secondary mt-3">
           <p>{{ site.data.settings.basic_settings.location }}</p>
-          <a href="tel:{{ site.data.settings.basic_settings.phone }}" class="btn btn-custom-primary mt-1">
+          <a href="tel:{{ site.data.settings.basic_settings.phone }}" class="link-fancy fs-5 mt-1">
           {{ site.data.settings.basic_settings.phone }}</a>
         </address>
       </div>
@@ -60,19 +60,25 @@
 <script src="{{ site.url }}/js/aos.js"></script>
 
 <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
-
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
-
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
-
-    console.log(scrollpos)
-  })
-</script>
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+  </script>
+ 
+  <script>
+   let scrollpos = window.scrollY
+   const header = document.querySelector(".navbar")
+   const header_height = header.offsetHeight
+ 
+   const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+   const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+ 
+   window.addEventListener('scroll', function() {
+     scrollpos = window.scrollY;
+ 
+     if (scrollpos >= header_height) { add_class_on_scroll() }
+     else { remove_class_on_scroll() }
+ 
+     console.log(scrollpos)
+   })
+ </script>

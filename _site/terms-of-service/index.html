@@ -136,7 +136,7 @@
           <h1 class="display-1 fw-bold border-bottom border-dark pb-4">Terms of Service</h1>
           <p class="lead py-vh-2">Last Updated: May 16, 2023</p>
 
-          <p> Terms and Conditions</p>
+          <p>N21 Properties Terms and Conditions</p>
 
           <p>Please read these terms and conditions carefully before using Our Service.</p>
           <p>Interpretation and Definitions</p>
@@ -146,9 +146,9 @@
           
           <p>For the purposes of these Terms and Conditions:</p>
 
-          <p>Affiliate means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authority. Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to . Country refers to , United States</p>
+          <p>Affiliate means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authority. Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to N21 Properties. Country refers to Utah, United States</p>
           
-          <p>Service refers to the Website. Terms and Conditions (also referred to as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the Terms and Conditions Generator. Third-party Social Media Service means any services or content (including data, information, products, or services) provided by a third party that may be displayed, included, or made available by the Service. The website refers to , accessible from http://localhost:4000. “You” means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+          <p>Service refers to the Website. Terms and Conditions (also referred to as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the Terms and Conditions Generator. Third-party Social Media Service means any services or content (including data, information, products, or services) provided by a third party that may be displayed, included, or made available by the Service. The website refers to N21 Properties, accessible from http://localhost:4000. “You” means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
 
           <p>Acknowledgment</p>
 
@@ -220,7 +220,7 @@
 
           <p>You can contact us:</p>
 
-          <p>By phone number: </p>
+          <p>By phone number: (385) 786-6805</p>
 
         </div>
       </div>
@@ -242,7 +242,7 @@
         <h4 class="h6 fw-light">Real Estate Rental Host &amp; Co-host</h4>
         <address class="text-secondary mt-3">
           <p>Salt Lake City, Utah</p>
-          <a href="tel:(385) 786-6805" class="btn btn-custom-primary mt-1">
+          <a href="tel:(385) 786-6805" class="link-fancy fs-5 mt-1">
           (385) 786-6805</a>
         </address>
       </div>
@@ -297,22 +297,28 @@
 <script src="http://localhost:4000/js/aos.js"></script>
 
 <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
-
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
-
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
-
-    console.log(scrollpos)
-  })
-</script>
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+  </script>
+ 
+  <script>
+   let scrollpos = window.scrollY
+   const header = document.querySelector(".navbar")
+   const header_height = header.offsetHeight
+ 
+   const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+   const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+ 
+   window.addEventListener('scroll', function() {
+     scrollpos = window.scrollY;
+ 
+     if (scrollpos >= header_height) { add_class_on_scroll() }
+     else { remove_class_on_scroll() }
+ 
+     console.log(scrollpos)
+   })
+ </script>
   </body>
 </html>
  

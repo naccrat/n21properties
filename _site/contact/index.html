@@ -129,10 +129,10 @@
   </div>
 </nav>
   <main>
-    <div class="w-100 overflow-hidden">
+    <div class="w-100 overflow-hidden bg-gray-100">
         <div class="container-fluid">
           <div class="row justify-content-center">
-            <div class="col-8 py-vh-5">
+            <div class="col-10 py-vh-5">
               <h1 class="display-2 mt-5 pt-5">Contact Us</h1>
               <p class="lead"></p>
             </div>
@@ -197,7 +197,7 @@
         <h4 class="h6 fw-light">Real Estate Rental Host &amp; Co-host</h4>
         <address class="text-secondary mt-3">
           <p>Salt Lake City, Utah</p>
-          <a href="tel:(385) 786-6805" class="btn btn-custom-primary mt-1">
+          <a href="tel:(385) 786-6805" class="link-fancy fs-5 mt-1">
           (385) 786-6805</a>
         </address>
       </div>
@@ -252,22 +252,28 @@
 <script src="http://localhost:4000/js/aos.js"></script>
 
 <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
-
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
-
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
-
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
-
-    console.log(scrollpos)
-  })
-</script>
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+  </script>
+ 
+  <script>
+   let scrollpos = window.scrollY
+   const header = document.querySelector(".navbar")
+   const header_height = header.offsetHeight
+ 
+   const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+   const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+ 
+   window.addEventListener('scroll', function() {
+     scrollpos = window.scrollY;
+ 
+     if (scrollpos >= header_height) { add_class_on_scroll() }
+     else { remove_class_on_scroll() }
+ 
+     console.log(scrollpos)
+   })
+ </script>
   </body>
 </html>
  
