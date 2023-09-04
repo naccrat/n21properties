@@ -1,6 +1,6 @@
 - title: "Home"
   url: "/"
 - title: "Properties"
-  url: "#properties"
+  url: "/#properties"
 - title: "Contact"
   url: "/contact/"
